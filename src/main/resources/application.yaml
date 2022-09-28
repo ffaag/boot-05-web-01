@@ -1,0 +1,17 @@
+#spring:
+#  # 当前项目 + static-path-pattern + 静态资源名 = 静态资源文件夹下找
+#  mvc:
+#    static-path-pattern: /res/**
+
+# 设置访问时浏览器中图标，这个你直接搞一个别人的，进入网页，按f12，点击NetWork，搜索fav，
+# 然后选择head复制网址搜索就好了，把他放到静态资源目录下，文件名别改，自动就帮你配置好的
+
+# 开启rest风格，即可以写get、post、put、delete方法，当然前端一样要写hidden域_method
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  contentnegotiation:
+    favor-parameter: true     #开启请求参数内容协商模式
